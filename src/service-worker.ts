@@ -72,6 +72,8 @@ registerRoute(
 // This allows the web app to trigger skipWaiting via
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})
 self.addEventListener("message", (event) => {
+  console.log("🔴 inside the serviceWorker, message event");
+  console.log("🔴 message: ", event);
   if (event.data && event.data.type === "SKIP_WAITING") {
     self.skipWaiting();
   }
@@ -79,11 +81,6 @@ self.addEventListener("message", (event) => {
 
 self.addEventListener("install", (event) => {
   console.log("🔴 inside the serviceWorker, install event");
-});
-
-self.addEventListener("message", (event) => {
-  console.log("🔴 inside the serviceWorker, message event");
-  console.log("🔴 message: ", event);
 });
 
 self.addEventListener("activate", (event) => {
