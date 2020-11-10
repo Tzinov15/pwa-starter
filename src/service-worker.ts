@@ -81,6 +81,11 @@ self.addEventListener("install", (event) => {
   console.log("🔴 inside the serviceWorker, install event");
 });
 
+self.addEventListener("message", (event) => {
+  console.log("🔴 inside the serviceWorker, message event");
+  console.log("🔴 message: ", event);
+});
+
 self.addEventListener("activate", (event) => {
   console.log("🔴 inside the serviceWorker, activate event");
 });
