@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "./logo.png";
 import "./App.css";
 
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>This is my PWA seed project</p>
+        <p>This is my PWA seed project test V2</p>
       </header>
     </div>
   );
