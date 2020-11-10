@@ -94,4 +94,9 @@ self.addEventListener("offline", (event) => {
   console.log("🔴 inside the serviceWorker, offline event");
 });
 
+self.addEventListener("fetch", (event) => {
+  console.log("🔴 inside the serviceWorker, fetch event");
+  console.log("🔴 url: ", event.request.url);
+});
+
 // Any other custom service worker logic can go here.
