@@ -86,7 +86,7 @@ export const Button = styled.button`
 export const LightIndicator = styled.div<{ color: string }>`
   position: fixed;
   left: 1rem;
-  top: 2rem;
+  top: 2.5rem;
   font-family: Raleway, sans-serif;
   font-weight: 800;
   height: 1rem;
