@@ -74,7 +74,7 @@ function registerValidSW(swUrl: string, config?: Config) {
       intervalVar = setInterval(() => {
         console.log("checking for newer version!");
         registration.update();
-      }, 10000);
+      }, 3000);
 
       registration.onupdatefound = () => {
         console.log("⑥ 🔵 registatration.onupdatefound called");

@@ -41,6 +41,18 @@ function App() {
           <button onClick={() => window.location.reload()}>Update available!!!!</button>
         )}
       </header>
+      {window.innerHeight !== window.screen.height && (
+        <footer>
+          <p>
+            <span>You can add me as an app! </span>
+            <br />
+            Click the
+            <i className="fal fa-arrow-square-up" style={{ color: "#007AFF" }} />
+            below <br /> Select "Add to Home Screen"
+            <i className="fal fa-plus-square" />
+          </p>
+        </footer>
+      )}
     </div>
   );
 }
