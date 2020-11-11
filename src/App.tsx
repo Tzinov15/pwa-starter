@@ -1,35 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import logo from "./logo.png";
 import "./App.css";
-import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import { usePWA } from "./PWAProvider";
 
 function App() {
-  const [updateAvailable, setUpdateAvailable] = useState(false);
-  const [isOffline, setIsOffline] = useState(false);
-  useEffect(() => {
-    const handleOnlineOfflineEvents = () => {
-      if (navigator.onLine) {
-        setIsOffline(false);
-      } else {
-        setIsOffline(true);
-      }
-    };
-    handleOnlineOfflineEvents();
-    window.addEventListener("offline", handleOnlineOfflineEvents);
-    window.addEventListener("online", handleOnlineOfflineEvents);
-    console.log("① 🔵 in index.tsx, calling serviceWorkerRegistration.register()");
-    serviceWorkerRegistration.register({
-      onUpdate: (r) => {
-        console.log("Passing in function to register (onUpdate)");
-        r.waiting?.postMessage({ type: "SKIP_WAITING" });
-        setUpdateAvailable(true);
-      },
-    });
-    window.navigator.serviceWorker.ready.then((r) => {
-      r.waiting?.postMessage({ type: "SKIP_WAITING" });
-      r.active?.postMessage({ type: "SKIP_WAITING" });
-    });
-  }, []);
+  const { showDownloadPrompt, isOffline, updateAvailable } = usePWA();
+
   return (
     <div className="App">
       <header className="App-header">
@@ -41,7 +17,7 @@ function App() {
           <button onClick={() => window.location.reload()}>Update available!!!!</button>
         )}
       </header>
-      {!window.matchMedia("(display-mode: standalone)").matches && (
+      {showDownloadPrompt && (
         <footer>
           <p>
             <span>You can add me as an app! </span>
