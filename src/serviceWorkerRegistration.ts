@@ -23,7 +23,8 @@ const isLocalhost = Boolean(
 type Config = {
   onSuccess?: (registration: ServiceWorkerRegistration) => void;
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
-  onOffline?: () => void;
+  onFailedUpdate?: () => void;
+  onSuccessUpdate?: () => void;
 };
 
 export function register(config?: Config) {
@@ -63,7 +64,7 @@ export function register(config?: Config) {
   }
 }
 
-let intervalVar: NodeJS.Timeout;
+let intervalVar: number;
 function registerValidSW(swUrl: string, config?: Config) {
   navigator.serviceWorker
     .register(swUrl)
@@ -73,7 +74,16 @@ function registerValidSW(swUrl: string, config?: Config) {
       console.log("registering interval to update app");
       intervalVar = setInterval(() => {
         console.log("checking for newer version!");
-        registration.update();
+        registration
+          .update()
+          .then((res) => {
+            console.log("res", res);
+            config?.onSuccessUpdate && config.onSuccessUpdate();
+          })
+          .catch((err) => {
+            console.log("err", err);
+            config?.onFailedUpdate && config.onFailedUpdate();
+          });
       }, 3000);
 
       registration.onupdatefound = () => {
@@ -143,7 +153,7 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
     })
     .catch(() => {
       console.log("No internet connection found. App is running in offline mode.");
-      config?.onOffline && config.onOffline();
+      config?.onFailedUpdate && config.onFailedUpdate();
     });
 }
 
