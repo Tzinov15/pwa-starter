@@ -9,7 +9,7 @@ interface PWAProps {
 }
 
 const PWAContext = React.createContext<PWAProps>({
-  isOffline: true,
+  isOffline: false,
   updateAvailable: false,
   showDownloadPrompt: false,
 });
