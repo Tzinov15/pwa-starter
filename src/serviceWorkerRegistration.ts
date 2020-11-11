@@ -63,11 +63,18 @@ export function register(config?: Config) {
   }
 }
 
+let intervalVar: NodeJS.Timeout;
 function registerValidSW(swUrl: string, config?: Config) {
   navigator.serviceWorker
     .register(swUrl)
     .then((registration) => {
       console.log("⑤ 🔵 navigator.serviceWorker.register.then called with this: ", registration);
+
+      console.log("registering interval to update app");
+      intervalVar = setInterval(() => {
+        console.log("checking for newer version!");
+        registration.update();
+      }, 10000);
 
       registration.onupdatefound = () => {
         console.log("⑥ 🔵 registatration.onupdatefound called");
@@ -145,6 +152,7 @@ export function unregister() {
     navigator.serviceWorker.ready
       .then((registration) => {
         registration.unregister();
+        clearInterval(intervalVar);
       })
       .catch((error) => {
         console.error(error.message);

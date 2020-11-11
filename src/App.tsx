@@ -7,6 +7,16 @@ function App() {
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [isOffline, setIsOffline] = useState(false);
   useEffect(() => {
+    const handleOnlineOfflineEvents = () => {
+      if (navigator.onLine) {
+        setIsOffline(false);
+      } else {
+        setIsOffline(true);
+      }
+    };
+    handleOnlineOfflineEvents();
+    window.addEventListener("offline", handleOnlineOfflineEvents);
+    window.addEventListener("online", handleOnlineOfflineEvents);
     console.log("① 🔵 in index.tsx, calling serviceWorkerRegistration.register()");
     serviceWorkerRegistration.register({
       onUpdate: (r) => {
@@ -14,24 +24,17 @@ function App() {
         r.waiting?.postMessage({ type: "SKIP_WAITING" });
         setUpdateAvailable(true);
       },
-      onOffline: () => {
-        console.log("Passing in function to register (onUpdate)");
-        setIsOffline(true);
-      },
     });
     window.navigator.serviceWorker.ready.then((r) => {
       r.waiting?.postMessage({ type: "SKIP_WAITING" });
       r.active?.postMessage({ type: "SKIP_WAITING" });
-    });
-    window.navigator.serviceWorker.addEventListener("messageerror", (ev) => {
-      console.log("ev", ev);
     });
   }, []);
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>This is my PWA seed project test V20</p>
+        <p>PWA seed project V23</p>
         {isOffline && <p style={{ color: "red" }}>you are offline...</p>}
         {!isOffline && <p style={{ color: "green" }}>you are online!</p>}
         {updateAvailable && (
