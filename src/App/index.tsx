@@ -9,7 +9,10 @@ function App() {
   return (
     <Main>
       <img src={logo} className="logo" alt="logo" />
-      <Title>PWA seed project</Title>
+      <Title>
+        PWA seed project
+        <br /> <code>v0.1</code>
+      </Title>
       <StatusLight />
       <UpdateAppButton />
       <DownloadAsAppCTA />

@@ -45,6 +45,7 @@ export const PWAProvider: React.FC = ({ children }) => {
         r.waiting?.postMessage({ type: "SKIP_WAITING" });
         // ♻️ To automatically refresh when there is an update available,
         // add a window.location.reload() here instead of setting flag
+        setIsOffline(false);
         setUpdateAvailable(true);
       },
       onFailedUpdate: () => {
