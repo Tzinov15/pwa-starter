@@ -11,7 +11,7 @@ function App() {
       <img src={logo} className="logo" alt="logo" />
       <Title>
         PWA seed project 🎉
-        <br /> <code>v0.1</code>
+        <br /> <code>v0.2</code>
       </Title>
       <StatusLight />
       <UpdateAppButton />
