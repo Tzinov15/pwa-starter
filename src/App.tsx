@@ -41,7 +41,7 @@ function App() {
           <button onClick={() => window.location.reload()}>Update available!!!!</button>
         )}
       </header>
-      {window.innerHeight !== window.screen.height && (
+      {!window.matchMedia("(display-mode: standalone)").matches && (
         <footer>
           <p>
             <span>You can add me as an app! </span>
