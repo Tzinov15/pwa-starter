@@ -28,5 +28,11 @@
     "date": "Wed Nov 11 18:14:44 MST 2020",
     "tag": "v.8",
     "message": "solid version so far"
+  },
+  {
+    "hash": "baacb501461624e37e2c8c6367fe39392cd6297d",
+    "date": "Wed Nov 11 18:15:45 MST 2020",
+    "tag": "v1.1",
+    "message": "add versions file"
   }
 ]
