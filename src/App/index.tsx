@@ -15,7 +15,7 @@ function App() {
     <Main>
       <img src={logo} className="logo" alt="logo" />
       <Title>
-        PWA seed project 🎉 🦓 ⛄️
+        PWA seed project 🎉
         <section className="mostRecentVersion">
           <div>
             {/* eslint-disable-next-line */}
