@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./logo.png";
-import { Main, Title, VersionBlock, VersionsSection } from "./components";
+import { Main, Title } from "./components";
 import { DownloadAsAppCTA } from "./DownloadAsAppCTA";
 import { StatusLight } from "./StatusLight";
 import { UpdateAppButton } from "./UpdateAppButton";
@@ -18,7 +18,8 @@ function App() {
         PWA seed project 🎉
         <section className="mostRecentVersion">
           <div>
-            <code>// most recent build</code>
+            {/* eslint-disable-next-line */}
+            <code>//most recent build</code>
             <code>date: {mostRecentVersion?.date}</code>
             <code>tag: {mostRecentVersion?.tag}</code>
             <code>message: {mostRecentVersion?.message}</code>
