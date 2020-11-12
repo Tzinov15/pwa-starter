@@ -16,6 +16,35 @@ export const Title = styled.title`
       color: ${(props) => props.theme.colors.primary};
     }
   }
+
+  div {
+    margin-top: 1rem;
+    text-align: start;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    font-weight: 700;
+    code {
+      display: block;
+      font-size: 0.75rem;
+    }
+  }
+`;
+
+export const VersionsSection = styled.section`
+  max-height: 20vh;
+  overflow-y: scroll;
+`;
+
+export const VersionBlock = styled.div`
+  margin-top: 1rem;
+  text-align: start;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 1rem;
+  code {
+    display: block;
+    font-size: 0.75rem;
+  }
 `;
 
 export const Main = styled.main`
@@ -64,6 +93,7 @@ export const Footer = styled.footer`
 export const Button = styled.button`
   height: 3rem;
   border-radius: 0px;
+  margin-top: 1rem;
   padding: 0.5rem;
   background: transparent;
   border: 2px solid ${(props) => props.theme.colors.primary};
