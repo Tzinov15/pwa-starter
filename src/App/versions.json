@@ -4,5 +4,11 @@
     "date": "Wed Nov 11 17:26:18 MST 2020",
     "tag": "v0.5",
     "message": "start of versions"
+  },
+  {
+    "hash": "931a9b4bb666eef20f2e9ed66b2a1f6d001ecf8e",
+    "date": "Wed Nov 11 17:55:03 MST 2020",
+    "tag": "v0.6",
+    "message": "display versions in app"
   }
 ]
