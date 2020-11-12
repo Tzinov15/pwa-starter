@@ -10,5 +10,11 @@
     "date": "Wed Nov 11 17:55:03 MST 2020",
     "tag": "v0.6",
     "message": "display versions in app"
+  },
+  {
+    "hash": "42de140b169518ac17237efb87561fd9c453f9d6",
+    "date": "Wed Nov 11 18:07:45 MST 2020",
+    "tag": "v0.7",
+    "message": "emma is awesome"
   }
 ]
