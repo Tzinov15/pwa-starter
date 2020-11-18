@@ -10,5 +10,29 @@
     "date": "Wed Nov 11 17:55:03 MST 2020",
     "tag": "v0.6",
     "message": "display versions in app"
+  },
+  {
+    "hash": "42de140b169518ac17237efb87561fd9c453f9d6",
+    "date": "Wed Nov 11 18:07:45 MST 2020",
+    "tag": "v0.7",
+    "message": "emma is awesome"
+  },
+  {
+    "hash": "418b45d4eb50ac84642472a675ef1aa201ce9d22",
+    "date": "Wed Nov 11 18:13:37 MST 2020",
+    "tag": "v1.0",
+    "message": "remove emojis"
+  },
+  {
+    "hash": "2b315bb0f2bdb42ab068dd11796b8541051fe246",
+    "date": "Wed Nov 11 18:14:44 MST 2020",
+    "tag": "v.8",
+    "message": "solid version so far"
+  },
+  {
+    "hash": "baacb501461624e37e2c8c6367fe39392cd6297d",
+    "date": "Wed Nov 11 18:15:45 MST 2020",
+    "tag": "v1.1",
+    "message": "add versions file"
   }
 ]

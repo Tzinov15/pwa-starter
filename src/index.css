@@ -1,12 +1,94 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #22c4f8;
+html {
+  scrollbar-width: none !important;
+  overflow-y: hidden;
+  height: 100%;
+  overscroll-behavior-y: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+body {
+  /* background: var(--primaryColor); */
+  background: #2d2e30;
+  overflow-y: hidden;
+  height: 100%;
+  overscroll-behavior-y: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+div::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+@font-face {
+  font-family: "PhosphateInline";
+  src: url("./Phosphate-Inline.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PhosphateSolid";
+  src: url("./Phosphate-Solid.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: PhosphateSolid;
+}
+
+p {
+  font-family: "Helvetica", sans-serif;
+  font-size: 1rem;
+  /* font-family: "Signika", sans-serif; */
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.useFontAwesomeFamily::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  font-family: "Font Awesome 5 Pro" !important;
+  font-weight: 300;
+}
+.useFontAwesomeFamily:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  font-family: "Font Awesome 5 Pro" !important;
+  font-weight: 300;
+}
+.useFontAwesomeFamily::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font-family: "Font Awesome 5 Pro" !important;
+  font-weight: 300;
+}
+.useFontAwesomeFamily:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: "Font Awesome 5 Pro" !important;
+  font-weight: 300;
+}
+.useFontAwesomeFamily::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: "Font Awesome 5 Pro" !important;
+  font-weight: 300;
+}
+.useFontAwesomeFamily::placeholder {
+  /* Most modern browsers */
+  font-family: "Font Awesome 5 Pro" !important;
+  font-weight: 300;
+}
+
+input[type="date"] {
+  min-height: 1rem;
 }

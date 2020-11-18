@@ -1,6 +1,6 @@
 {
-  "short_name": "PWA Starter",
-  "name": "Seed Project for PWA apps",
+  "short_name": "Splurv",
+  "name": "Splurv",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#282c34"
+  "theme_color": "#85FFA7",
+  "background_color": "#2D2E30"
 }
