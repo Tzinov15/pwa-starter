@@ -16,7 +16,7 @@ function App() {
       <img src={logo} className="logo" alt="logo" />
       <Title>
         PWA seed project 🎉
-        <div style={{ maxHeight: '60%', overflowY: 'scroll' }}>
+        <div style={{ maxHeight: '200px', height: '200px', overflowY: 'scroll' }}>
 
           {versions.map(v => (
 

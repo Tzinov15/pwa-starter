@@ -46,5 +46,11 @@
     "date": "Mon Aug 30 07:16:34 MDT 2021",
     "tag": "v0.2",
     "message": "body lock scroll attempt"
+  },
+  {
+    "hash": "9fb461366668d4792fb6ebeef9121c37fd08b9af",
+    "date": "Mon Aug 30 07:17:15 MDT 2021",
+    "tag": "v0.2",
+    "message": "adding more versions files"
   }
 ]
