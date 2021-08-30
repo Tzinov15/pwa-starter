@@ -62,7 +62,9 @@ export const PWAProvider: React.FC = ({ children }) => {
   }, []);
   return (
     <PWAContext.Provider value={{ isOffline, updateAvailable, showDownloadPrompt }}>
-      {children}
+      <div className='mainwrapper'>
+        {children}
+      </div>
     </PWAContext.Provider>
   );
 };
