@@ -34,5 +34,17 @@
     "date": "Wed Nov 11 18:15:45 MST 2020",
     "tag": "v1.1",
     "message": "add versions file"
+  },
+  {
+    "hash": "b2dedee1339c516d2a26d0fba4e697207fedb2bd",
+    "date": "Mon Aug 30 07:15:27 MDT 2021",
+    "tag": "v0.2",
+    "message": "versions file"
+  },
+  {
+    "hash": "9e5c62216547307f3e2649a1d5e4687229dab526",
+    "date": "Mon Aug 30 07:16:34 MDT 2021",
+    "tag": "v0.2",
+    "message": "body lock scroll attempt"
   }
 ]
