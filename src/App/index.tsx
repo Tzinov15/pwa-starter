@@ -32,6 +32,17 @@ function App() {
             </section>
           ))}
         </div>
+
+        <section className="mostRecentVersion">
+          <div>
+            {/* eslint-disable-next-line */}
+            <code>// most recent build</code>
+            <code>date: {mostRecentVersion?.date}</code>
+            <code>tag: {mostRecentVersion?.tag}</code>
+            <code>message: {mostRecentVersion?.message}</code>
+            <code>hash: {mostRecentVersion?.hash.slice(-6)}</code>
+          </div>
+        </section>
       </Title>
 
       <StatusLight />
