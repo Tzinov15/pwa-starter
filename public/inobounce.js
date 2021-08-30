@@ -25,6 +25,7 @@
         // Get the element that was scrolled upon
         var el = evt.target;
 
+
         // Allow zooming
         var zoom = window.innerWidth / window.document.documentElement.clientWidth;
         if (evt.touches.length > 1 || zoom !== 1) {
@@ -32,7 +33,11 @@
         }
 
         // Check all parent elements for scrollability
+        let count = 0
         while (el !== document.body && el !== document) {
+            count += 1
+            // console.log(`Step: ${count}`);
+            // console.log('el', el);
             // Get some style properties
             var style = window.getComputedStyle(el);
 
@@ -48,10 +53,22 @@
 
             var scrolling = style.getPropertyValue('-webkit-overflow-scrolling');
             var overflowY = style.getPropertyValue('overflow-y');
-            var height = parseInt(style.getPropertyValue('height'), 10);
+
+            // console.log('scrolling', scrolling);
+            // console.log('overflowY', overflowY);
+            // var height = parseInt(style.getPropertyValue('height'), 10);
+
+            let height = ['height', 'padding-top', 'padding-bottom']
+                .map((key) => parseInt(style.getPropertyValue(key), 10))
+                .reduce((prev, cur) => prev + cur);
 
             // Determine if the element should scroll
-            var isScrollable = scrolling === 'touch' && (overflowY === 'auto' || overflowY === 'scroll');
+            var isScrollable = (overflowY === 'auto' || overflowY === 'scroll');
+            // console.log('isScrollable', isScrollable);
+
+            // console.log('')
+            // console.log('')
+            // console.log('')
             var canScroll = el.scrollHeight > el.offsetHeight;
 
             if (isScrollable && canScroll) {
@@ -61,7 +78,21 @@
                 // Determine if the user is trying to scroll past the top or bottom
                 // In this case, the window will bounce, so we have to prevent scrolling completely
                 var isAtTop = (startY <= curY && el.scrollTop === 0);
+
+                // console.log('isAtTop', isAtTop);
+                // startY >= curY means: is the user scrolling down aka did their cursor start low on the page and move up
                 var isAtBottom = (startY >= curY && el.scrollHeight - el.scrollTop === height);
+                console.log('startY', startY);
+                console.log('curY', curY);
+                console.log('height', height);
+                console.log('el.scrollHeight', el.scrollHeight);
+                console.log('el.scrollTop', el.scrollTop);
+                console.log('e.scrollHeight - el.scrollTop', el.scrollHeight - el.scrollTop);
+                console.log('isAtBottom', isAtBottom);
+                console.log('');
+                console.log('');
+                console.log('');
+                console.log('');
 
                 // Stop a bounce bug when at the bottom or top of the scrollable element
                 if (isAtTop || isAtBottom) {
