@@ -136,5 +136,17 @@
     "date": "Sun Sep 11 14:36:48 MDT 2022",
     "tag": "v2.0.7",
     "message": "update sub title"
+  },
+  {
+    "hash": "09a1f19a2bd82e0f432f73b9d06b8d2618a93bfb",
+    "date": "Sun Sep 11 14:37:53 MDT 2022",
+    "tag": "v2.0.8",
+    "message": "add a cool subtitle"
+  },
+  {
+    "hash": "09a1f19a2bd82e0f432f73b9d06b8d2618a93bfb",
+    "date": "Sun Sep 11 14:37:53 MDT 2022",
+    "tag": "v2.0.8",
+    "message": "add a cool subtitle"
   }
 ]
