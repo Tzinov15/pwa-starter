@@ -58,16 +58,6 @@ export const Main = styled.main`
 
   img.logo {
     height: 40vmin;
-    animation: App-logo-spin infinite 2s alternate;
-  }
-
-  @keyframes App-logo-spin {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1.2);
-    }
   }
 `;
 
