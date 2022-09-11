@@ -2,7 +2,7 @@ import styled from "styled-components/macro";
 
 export const Title = styled.title`
   display: block;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   color: ${(props) => props.theme.colors.primary};
@@ -15,6 +15,11 @@ export const Title = styled.title`
     to {
       color: ${(props) => props.theme.colors.primary};
     }
+  }
+
+  span {
+    font-size: 1rem;
+    color: white;
   }
 
   div {
