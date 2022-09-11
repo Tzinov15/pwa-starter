@@ -172,5 +172,17 @@
     "date": "Sun Sep 11 14:42:58 MDT 2022",
     "tag": "v2.0.10",
     "message": "--versions file commit, safe to ignore"
+  },
+  {
+    "hash": "955241bcfd3689c311b3619829c23925e515dbaf",
+    "date": "Sun Sep 11 14:43:55 MDT 2022",
+    "tag": "v2.0.11",
+    "message": "--versions file commit, safe to ignore"
+  },
+  {
+    "hash": "955241bcfd3689c311b3619829c23925e515dbaf",
+    "date": "Sun Sep 11 14:43:55 MDT 2022",
+    "tag": "v2.0.11",
+    "message": "--versions file commit, safe to ignore"
   }
 ]

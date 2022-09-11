@@ -15,7 +15,7 @@ function App() {
       <Title>
         PWA seed project template 🎉
         <br />
-        <span>the cleanest template the world has ever seen, damn right</span>
+        <span>the cleanest template the world has ever seen, damn right #codeiscool</span>
         <div style={{ maxHeight: "200px", height: "200px", overflowY: "scroll" }}>
           {versions.map((v) => (
             <section className="mostRecentVersion">
