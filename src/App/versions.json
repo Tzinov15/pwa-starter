@@ -100,5 +100,11 @@
     "date": "Sun Sep 11 14:27:21 MDT 2022",
     "tag": "v2.0.3",
     "message": "why is gignore not working"
+  },
+  {
+    "hash": "f1cc40636b754207ac0e4e713146aaf118cba9b6",
+    "date": "Sun Sep 11 14:28:02 MDT 2022",
+    "tag": "v2.0.4",
+    "message": "more cleanup"
   }
 ]
