@@ -8,9 +8,7 @@ import _versions from "./versions.json";
 
 function App() {
   const versions = [..._versions];
-  const mostRecentVersion = versions
-    .sort((va, vb) => (Number(va.tag.split("v")[1]) > Number(vb.tag.split("v")[1]) ? 1 : -1))
-    .pop();
+  const mostRecentVersion = versions.pop();
   return (
     <Main>
       <img src={logo} className="logo" alt="logo" />

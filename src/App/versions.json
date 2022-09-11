@@ -112,5 +112,11 @@
     "date": "Sun Sep 11 14:28:26 MDT 2022",
     "tag": "v2.0.5",
     "message": "wow git is annoying"
+  },
+  {
+    "hash": "f2e9c69829fdbe4e99fea9421b79be0ad7da05cf",
+    "date": "Sun Sep 11 14:28:49 MDT 2022",
+    "tag": "v2.0.6",
+    "message": "one more time"
   }
 ]
