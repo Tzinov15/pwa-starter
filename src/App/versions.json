@@ -70,5 +70,11 @@
     "date": "Sun Sep 11 13:56:19 MDT 2022",
     "tag": "v0.2",
     "message": "final fix for inobounce"
+  },
+  {
+    "hash": "059e3252c4e02623a1d734d1b83a3158329e9fb0",
+    "date": "Sun Sep 11 13:59:32 MDT 2022",
+    "tag": "v2.0",
+    "message": "update readme with script"
   }
 ]
