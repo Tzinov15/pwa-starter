@@ -148,5 +148,11 @@
     "date": "Sun Sep 11 14:37:53 MDT 2022",
     "tag": "v2.0.8",
     "message": "add a cool subtitle"
+  },
+  {
+    "hash": "f422062f4166b96347ce43682949b6e8058b2fce",
+    "date": "Sun Sep 11 14:39:04 MDT 2022",
+    "tag": "v2.0.9",
+    "message": "add an extra word to warrant another commit"
   }
 ]
