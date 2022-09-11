@@ -13,7 +13,7 @@ function App() {
     <Main>
       <img src={logo} className="logo" alt="logo" />
       <Title>
-        PWA seed project 🎉
+        PWA seed project template 🎉
         <br />
         <span>the cleanest template the world has ever seen, damn right</span>
         <div style={{ maxHeight: "200px", height: "200px", overflowY: "scroll" }}>
