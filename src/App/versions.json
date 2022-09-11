@@ -64,5 +64,11 @@
     "date": "Mon Aug 30 07:57:51 MDT 2021",
     "tag": "v0.2",
     "message": "fix bugs"
+  },
+  {
+    "hash": "f92a77280ee34a80198b2f469fbc30b94d973503",
+    "date": "Sun Sep 11 13:56:19 MDT 2022",
+    "tag": "v0.2",
+    "message": "final fix for inobounce"
   }
 ]
