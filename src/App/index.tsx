@@ -14,6 +14,7 @@ function App() {
       <img src={logo} className="logo" alt="logo" />
       <Title>
         PWA seed project 🎉
+        <span>the cleanest template the world has ever seen</span>
         <div style={{ maxHeight: "200px", height: "200px", overflowY: "scroll" }}>
           {versions.map((v) => (
             <section className="mostRecentVersion">
